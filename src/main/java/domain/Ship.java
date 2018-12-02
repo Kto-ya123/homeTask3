@@ -3,6 +3,7 @@ package domain;
 import domain.exceptions.PortException;
 import org.apache.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -15,15 +16,12 @@ public class Ship extends Thread{
     private List<Container> containers;
     private Port port;
 
-
-    public Ship(Integer id, List<Container> containers) {
+    public Ship(Integer id) {
         this.id = id;
-        this.storage = new ShipStorage(SIZE_SHIP_STORAGE, id);
-        this.storage.setContainers(containers);
+        this.containers=new ArrayList<Container>();
     }
 
     public int getShipId() {
-
         return id;
     }
 
@@ -33,6 +31,10 @@ public class Ship extends Thread{
 
     public void setContainers(List<Container> containers) {
         this.containers = containers;
+    }
+
+    public int getFreeSpace(){
+        return SIZE_SHIP_STORAGE - containers.size();
     }
 
     @Override
