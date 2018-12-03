@@ -65,8 +65,6 @@ public class Dock {
             if (requestedContainersCount <= getFreeSpace()) {
                 List<Container> containers = ship.pickUpContainers(requestedContainersCount);
                 result = this.portContainers.addAll(containers);
-
-                //result = moveFromShipToPort(ship, requestedContainersCount);
             }
             ship.giveLock();
 
@@ -77,18 +75,6 @@ public class Dock {
         return result;
     }
 
-    //private boolean moveFromShipToPort(Ship ship, int requestedContainersCount) {
-    //    boolean result;
-    //    lockOfUploadingStorage.lock();
-    //    try {
-    //        List<Container> portContainers = ship.pickUpContainers(requestedContainersCount);
-    //        result = this.portContainers.addAll(portContainers);
-    //    } finally {
-    //        queueUploadingShip.remove(ship);
-    //        lockOfUploadingStorage.unlock();
-    //    }
-    //    return result;
-    //}
 
     public boolean loadContainersFromPort(Ship ship, int requestedContainersCount) {
         boolean result = false;
@@ -106,7 +92,6 @@ public class Dock {
             if (requestedContainersCount >= portContainers.size() && !portContainers.isEmpty()) {
                 List<Container> containers = pickUpContainers(requestedContainersCount);
                 result = ship.addContainers(containers);
-                //result = moveFromPortToShip(ship, requestedContainersCount);
             }
             ship.giveLock();
         } finally {
@@ -115,19 +100,6 @@ public class Dock {
         }
         return result;
     }
-
-    //private boolean moveFromPortToShip(Ship ship, int requestedContainersCount) {
-    //    boolean result;
-    //    lockOfLoadingStorage.lock();
-    //    try {
-    //        List<Container> portContainers = pickUpContainers(requestedContainersCount);
-    //        result = ship.addContainers(portContainers);
-    //    } finally {
-    //        queueLoadingShip.remove(ship);
-    //        lockOfLoadingStorage.unlock();
-    //    }
-    //    return result;
-    //}
 
 
     public boolean loadContainerFromOtherShip(Ship ship, int containersNumberToMove) {

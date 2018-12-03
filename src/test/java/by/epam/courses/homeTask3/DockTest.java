@@ -30,7 +30,7 @@ public class DockTest {
     }
 
     @Test
-    public void loadContainersFromPortTest(){
+    public void loadContainersFromPortTest() {
         List<Container> shipContainers = new ArrayList<>();
         shipContainers.add(new Container(11));
         shipContainers.add(new Container(12));
@@ -45,6 +45,5 @@ public class DockTest {
         System.out.println("free space after:" + ship.getFreeSpace());
         Assert.assertTrue(result);
     }
-
 
 }
