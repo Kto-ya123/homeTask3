@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fded73fc-c049-49af-8406-1bfc42de3e03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Container.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Port.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Ship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/exceptions/PortException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/exceptions/ShipException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/ShipAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/initialization/Initializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logging.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/DockTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/service/ThreadService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/util/ThreadManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Port.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Port.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/exceptions/PortException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/exceptions/PortException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/exceptions/ShipException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/exceptions/ShipException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,37 +32,48 @@
     <session id="2014435175">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="15" />
-          <entry key="txt" value="1" />
+          <entry key="java" value="29" />
+          <entry key="log" value="2" />
+          <entry key="properties" value="1" />
+          <entry key="txt" value="3" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="15" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="29" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="117" />
+          <entry key="dummy" value="23" />
+          <entry key="java" value="2273" />
+          <entry key="properties" value="73" />
           <entry key="txt" value="38" />
-          <entry key="xml" value="2" />
+          <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="117" />
-          <entry key="PLAIN_TEXT" value="38" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="2273" />
+          <entry key="PLAIN_TEXT" value="61" />
+          <entry key="Properties" value="73" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -63,101 +83,97 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/ServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Task.txt">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="64" />
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/util/ThreadManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <entry file="file://$PROJECT_DIR$/src/main/resources/logging.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="731">
+              <caret line="61" column="67" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="61" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/service/ThreadService.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/DockTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Ship.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            <state relative-caret-position="143">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
-                <element signature="e#769#770#0" expanded="true" />
-                <element signature="e#813#814#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/exceptions/PortException.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="687">
+              <caret line="209" column="23" lean-forward="true" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
               <folding>
-                <element signature="e#118#119#0" expanded="true" />
-                <element signature="e#148#149#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1112">
+              <caret line="208" column="32" lean-forward="true" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2484#2485#0" expanded="true" />
+                <element signature="e#2521#2522#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/initialization/Initializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Port.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/exceptions/ShipException.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state>
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
               <folding>
-                <element signature="e#116#117#0" expanded="true" />
-                <element signature="e#146#147#0" expanded="true" />
-                <element signature="e#207#208#0" expanded="true" />
-                <element signature="e#244#245#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Port.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/ShipAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="35" column="36" lean-forward="true" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#933#934#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -179,14 +195,26 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/Task.txt" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Container.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/ShipStorage.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Port.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Ship.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/exceptions/PortException.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/exceptions/ShipException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Ship.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/util/ContainerManager.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/ShipAction.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Initializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Port.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/logging.log" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/initialization/Initializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/ThreadTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/DockTest.java" />
       </list>
     </option>
   </component>
@@ -216,7 +244,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,23 +284,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="homeTask3" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homeTask3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homeTask3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homeTask3" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homeTask3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homeTask3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -282,8 +292,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeTask3" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
               <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="homeTask3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="homeTask3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeTask3" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="initialization" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homeTask3" type="b2602c69:ProjectViewProjectNode" />
@@ -317,17 +338,24 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543703801578" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543801773428" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="by.epam.courses.homeTask3" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\homeTask3\src\test\java" />
     </key>
@@ -344,6 +372,89 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="TestNG.DockTest.loadContainersFromPortTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.epam.courses.homeTask3.Main" />
+      <module name="homeTask3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.courses.homeTask3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DockTest.addContainerToPortTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="homeTask3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.courses.homeTask3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.courses.homeTask3" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.courses.homeTask3.DockTest" />
+      <option name="METHOD_NAME" value="addContainerToPortTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DockTest.loadContainersFromPortTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="homeTask3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.courses.homeTask3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.courses.homeTask3" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.courses.homeTask3.DockTest" />
+      <option name="METHOD_NAME" value="loadContainersFromPortTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DockTest.test" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="homeTask3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.courses.homeTask3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.courses.homeTask3" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.courses.homeTask3.DockTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.DockTest.test" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="TestNG.DockTest.addContainerToPortTest" />
+      <item itemvalue="TestNG.DockTest.loadContainersFromPortTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.DockTest.loadContainersFromPortTest" />
+        <item itemvalue="TestNG.DockTest.addContainerToPortTest" />
+        <item itemvalue="TestNG.DockTest.test" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -357,6 +468,10 @@
       <workItem from="1542175029889" duration="1366000" />
       <workItem from="1542402994186" duration="495000" />
       <workItem from="1543687819304" duration="4622000" />
+      <workItem from="1543740533157" duration="200000" />
+      <workItem from="1543751354923" duration="25743000" />
+      <workItem from="1543794898391" duration="6533000" />
+      <workItem from="1543825152101" duration="2691000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1542176077645</created>
@@ -368,14 +483,37 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ThreadTest_test - 2018.12.03 at 00h 45m 00s.xml">
+      <configuration name="ThreadTest.test" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ThreadTest_test - 2018.12.03 at 02h 59m 26s.xml">
+      <configuration name="ThreadTest.test" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ThreadTest_test - 2018.12.03 at 03h 36m 28s.xml">
+      <configuration name="ThreadTest.test" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ThreadTest_addContainerToPortTest - 2018.12.03 at 04h 15m 50s.xml">
+      <configuration name="ThreadTest.addContainerToPortTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ThreadTest_addContainerToPortTest - 2018.12.03 at 04h 16m 07s.xml">
+      <configuration name="ThreadTest.addContainerToPortTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ThreadTest_addContainerToPortTest - 2018.12.03 at 04h 16m 59s.xml">
+      <configuration name="ThreadTest.addContainerToPortTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ThreadTest_loadContainersFromPortTest - 2018.12.03 at 04h 49m 36s.xml">
+      <configuration name="ThreadTest.loadContainersFromPortTest" configurationId="TestNG" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6483000" />
+    <option name="totallyTimeSpent" value="41650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -383,8 +521,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -393,6 +531,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -417,129 +556,28 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Connection.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/a.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/ServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/service/ThreadService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Container.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Container.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#125#126#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Task.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/util/ThreadManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Port.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="35" column="36" lean-forward="true" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#933#934#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/ShipStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding>
-            <element signature="e#97#98#0" expanded="true" />
-            <element signature="e#128#129#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#188#189#0" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/exceptions/PortException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/ShipStorage.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Storage.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/service/ThreadService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/exceptions/PortException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#118#119#0" expanded="true" />
-            <element signature="e#148#149#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/exceptions/ShipException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/exceptions/ShipException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="102">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
             <element signature="e#116#117#0" expanded="true" />
             <element signature="e#146#147#0" expanded="true" />
@@ -549,11 +587,198 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/util/ContainerManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/util/ThreadManager.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-807">
+          <caret line="137" column="17" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Task.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="67" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/concurrent/locks/Condition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="231" column="9" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Port.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/ShipAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logging.log">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="100" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="100" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="731">
+          <caret line="61" column="67" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="61" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1112">
+          <caret line="208" column="32" lean-forward="true" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2521#2522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/initialization/Initializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/DockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="209" column="23" lean-forward="true" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>homeTask3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: log4j:log4j:1.2.17</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

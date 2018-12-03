@@ -1,0 +1,123 @@
+2018-12-03 03:25:18 INFO  Ship:63 - The ship 1 moored to the pier 0
+2018-12-03 03:25:18 INFO  Ship:63 - The ship 0 moored to the pier 1
+2018-12-03 03:25:18 INFO  Ship:137 - The ship 1 want to load 4 containers from port storage.
+2018-12-03 03:25:18 INFO  Ship:137 - The ship 0 want to load 1 containers from port storage.
+2018-12-03 03:25:18 INFO  Dock:105 - Port sent 4 containers, port size: 16
+2018-12-03 03:25:18 INFO  Ship:142 - The ship 1 loaded 4 containers from port.
+2018-12-03 03:25:18 INFO  Dock:105 - Port sent 1 containers, port size: 15
+2018-12-03 03:25:18 INFO  Ship:74 - The ship 1 moved away from the pier 0
+2018-12-03 03:25:18 INFO  Ship:142 - The ship 0 loaded 1 containers from port.
+2018-12-03 03:25:18 INFO  Ship:74 - The ship 0 moved away from the pier 1
+2018-12-03 03:25:23 INFO  Ship:63 - The ship 1 moored to the pier 2
+2018-12-03 03:25:23 INFO  Ship:137 - The ship 1 want to load 0 containers from port storage.
+2018-12-03 03:25:23 INFO  Ship:63 - The ship 0 moored to the pier 3
+2018-12-03 03:25:23 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:25:23 INFO  Ship:137 - The ship 0 want to load 0 containers from port storage.
+2018-12-03 03:25:23 WARN  Ship:144 - Port haven't containers to load ship 1
+2018-12-03 03:25:23 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:25:23 INFO  Ship:74 - The ship 1 moved away from the pier 2
+2018-12-03 03:25:23 WARN  Ship:144 - Port haven't containers to load ship 0
+2018-12-03 03:25:23 INFO  Ship:74 - The ship 0 moved away from the pier 3
+2018-12-03 03:25:28 INFO  Ship:63 - The ship 1 moored to the pier 0
+2018-12-03 03:25:28 INFO  Ship:120 - The ship 1 is going to upload 5 containers to port storage.
+2018-12-03 03:25:28 INFO  Ship:63 - The ship 0 moored to the pier 1
+2018-12-03 03:25:28 INFO  Dock:65 - Port received 5 containers, port size: 20
+2018-12-03 03:25:28 INFO  Ship:137 - The ship 0 want to load 0 containers from port storage.
+2018-12-03 03:25:28 INFO  Ship:125 - Port storage load containers from ship 1
+2018-12-03 03:25:28 INFO  Dock:105 - Port sent 0 containers, port size: 20
+2018-12-03 03:25:28 INFO  Ship:74 - The ship 1 moved away from the pier 0
+2018-12-03 03:25:28 WARN  Ship:144 - Port haven't containers to load ship 0
+2018-12-03 03:25:28 INFO  Ship:74 - The ship 0 moved away from the pier 1
+2018-12-03 03:25:33 INFO  Ship:63 - The ship 1 moored to the pier 2
+2018-12-03 03:25:33 INFO  Ship:137 - The ship 1 want to load 5 containers from port storage.
+2018-12-03 03:25:33 INFO  Ship:63 - The ship 0 moored to the pier 3
+2018-12-03 03:25:33 INFO  Dock:105 - Port sent 5 containers, port size: 15
+2018-12-03 03:25:33 INFO  Ship:120 - The ship 0 is going to upload 5 containers to port storage.
+2018-12-03 03:25:33 INFO  Ship:142 - The ship 1 loaded 5 containers from port.
+2018-12-03 03:25:33 INFO  Dock:65 - Port received 5 containers, port size: 20
+2018-12-03 03:25:33 INFO  Ship:74 - The ship 1 moved away from the pier 2
+2018-12-03 03:25:33 INFO  Ship:125 - Port storage load containers from ship 0
+2018-12-03 03:25:33 INFO  Ship:74 - The ship 0 moved away from the pier 3
+2018-12-03 03:25:38 INFO  Ship:63 - The ship 1 moored to the pier 0
+2018-12-03 03:25:38 INFO  Ship:120 - The ship 1 is going to upload 5 containers to port storage.
+2018-12-03 03:25:38 INFO  Ship:63 - The ship 0 moored to the pier 1
+2018-12-03 03:25:38 INFO  Dock:65 - Port received 5 containers, port size: 25
+2018-12-03 03:25:38 INFO  Ship:125 - Port storage load containers from ship 1
+2018-12-03 03:25:38 INFO  Ship:120 - The ship 0 is going to upload 0 containers to port storage.
+2018-12-03 03:25:38 INFO  Ship:74 - The ship 1 moved away from the pier 0
+2018-12-03 03:25:38 INFO  Dock:65 - Port received 0 containers, port size: 25
+2018-12-03 03:25:38 WARN  Ship:127 - Port haven't place to load containers from ship0
+2018-12-03 03:25:38 INFO  Ship:74 - The ship 0 moved away from the pier 1
+2018-12-03 03:25:43 INFO  Ship:63 - The ship 1 moored to the pier 2
+2018-12-03 03:25:43 INFO  Ship:137 - The ship 1 want to load 5 containers from port storage.
+2018-12-03 03:25:43 INFO  Ship:63 - The ship 0 moored to the pier 3
+2018-12-03 03:25:43 INFO  Dock:105 - Port sent 5 containers, port size: 20
+2018-12-03 03:25:43 INFO  Ship:137 - The ship 0 want to load 5 containers from port storage.
+2018-12-03 03:25:43 INFO  Ship:142 - The ship 1 loaded 5 containers from port.
+2018-12-03 03:25:43 INFO  Dock:105 - Port sent 5 containers, port size: 15
+2018-12-03 03:25:43 INFO  Ship:74 - The ship 1 moved away from the pier 2
+2018-12-03 03:25:43 INFO  Ship:142 - The ship 0 loaded 5 containers from port.
+2018-12-03 03:25:43 INFO  Ship:74 - The ship 0 moved away from the pier 3
+2018-12-03 03:25:48 INFO  Ship:63 - The ship 0 moored to the pier 0
+2018-12-03 03:25:48 INFO  Ship:63 - The ship 1 moored to the pier 1
+2018-12-03 03:25:48 INFO  Ship:137 - The ship 0 want to load 0 containers from port storage.
+2018-12-03 03:25:48 INFO  Ship:137 - The ship 1 want to load 0 containers from port storage.
+2018-12-03 03:25:48 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:25:48 WARN  Ship:144 - Port haven't containers to load ship 0
+2018-12-03 03:25:48 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:25:48 INFO  Ship:74 - The ship 0 moved away from the pier 0
+2018-12-03 03:25:48 WARN  Ship:144 - Port haven't containers to load ship 1
+2018-12-03 03:25:48 INFO  Ship:74 - The ship 1 moved away from the pier 1
+2018-12-03 03:25:53 INFO  Ship:63 - The ship 0 moored to the pier 2
+2018-12-03 03:25:53 INFO  Ship:120 - The ship 0 is going to upload 5 containers to port storage.
+2018-12-03 03:25:53 INFO  Dock:65 - Port received 5 containers, port size: 20
+2018-12-03 03:25:53 INFO  Ship:63 - The ship 1 moored to the pier 3
+2018-12-03 03:25:53 INFO  Ship:125 - Port storage load containers from ship 0
+2018-12-03 03:25:53 INFO  Ship:120 - The ship 1 is going to upload 5 containers to port storage.
+2018-12-03 03:25:53 INFO  Ship:74 - The ship 0 moved away from the pier 2
+2018-12-03 03:25:53 INFO  Dock:65 - Port received 5 containers, port size: 25
+2018-12-03 03:25:53 INFO  Ship:125 - Port storage load containers from ship 1
+2018-12-03 03:25:53 INFO  Ship:74 - The ship 1 moved away from the pier 3
+2018-12-03 03:25:58 INFO  Ship:63 - The ship 0 moored to the pier 0
+2018-12-03 03:25:58 INFO  Ship:137 - The ship 0 want to load 5 containers from port storage.
+2018-12-03 03:25:58 INFO  Dock:105 - Port sent 5 containers, port size: 20
+2018-12-03 03:25:58 INFO  Ship:63 - The ship 1 moored to the pier 1
+2018-12-03 03:25:58 INFO  Ship:142 - The ship 0 loaded 5 containers from port.
+2018-12-03 03:25:58 INFO  Ship:137 - The ship 1 want to load 5 containers from port storage.
+2018-12-03 03:25:58 INFO  Ship:74 - The ship 0 moved away from the pier 0
+2018-12-03 03:25:58 INFO  Dock:105 - Port sent 5 containers, port size: 15
+2018-12-03 03:25:58 INFO  Ship:142 - The ship 1 loaded 5 containers from port.
+2018-12-03 03:25:58 INFO  Ship:74 - The ship 1 moved away from the pier 1
+2018-12-03 03:26:03 INFO  Ship:63 - The ship 0 moored to the pier 2
+2018-12-03 03:26:03 INFO  Ship:137 - The ship 0 want to load 0 containers from port storage.
+2018-12-03 03:26:03 INFO  Ship:63 - The ship 1 moored to the pier 3
+2018-12-03 03:26:03 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:26:03 INFO  Ship:137 - The ship 1 want to load 0 containers from port storage.
+2018-12-03 03:26:03 WARN  Ship:144 - Port haven't containers to load ship 0
+2018-12-03 03:26:03 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:26:03 INFO  Ship:74 - The ship 0 moved away from the pier 2
+2018-12-03 03:26:03 WARN  Ship:144 - Port haven't containers to load ship 1
+2018-12-03 03:26:03 INFO  Ship:74 - The ship 1 moved away from the pier 3
+2018-12-03 03:26:08 INFO  Ship:63 - The ship 1 moored to the pier 0
+2018-12-03 03:26:08 INFO  Ship:63 - The ship 0 moored to the pier 1
+2018-12-03 03:26:08 INFO  Ship:137 - The ship 1 want to load 0 containers from port storage.
+2018-12-03 03:26:08 INFO  Ship:137 - The ship 0 want to load 0 containers from port storage.
+2018-12-03 03:26:08 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:26:08 WARN  Ship:144 - Port haven't containers to load ship 1
+2018-12-03 03:26:08 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:26:08 INFO  Ship:74 - The ship 1 moved away from the pier 0
+2018-12-03 03:26:08 WARN  Ship:144 - Port haven't containers to load ship 0
+2018-12-03 03:26:08 INFO  Ship:74 - The ship 0 moved away from the pier 1
+2018-12-03 03:26:13 INFO  Ship:63 - The ship 1 moored to the pier 2
+2018-12-03 03:26:13 INFO  Ship:63 - The ship 0 moored to the pier 3
+2018-12-03 03:26:13 INFO  Ship:137 - The ship 1 want to load 0 containers from port storage.
+2018-12-03 03:26:13 INFO  Ship:137 - The ship 0 want to load 0 containers from port storage.
+2018-12-03 03:26:13 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:26:13 WARN  Ship:144 - Port haven't containers to load ship 1
+2018-12-03 03:26:13 INFO  Dock:105 - Port sent 0 containers, port size: 15
+2018-12-03 03:26:13 INFO  Ship:74 - The ship 1 moved away from the pier 2
+2018-12-03 03:26:13 WARN  Ship:144 - Port haven't containers to load ship 0
+2018-12-03 03:26:13 INFO  Ship:74 - The ship 0 moved away from the pier 3
+2018-12-03 04:15:49 INFO  Dock:65 - Port received 3 containers, port size: 6
+2018-12-03 04:16:07 INFO  Dock:65 - Port received 3 containers, port size: 6
+2018-12-03 04:16:58 INFO  Dock:65 - Port received 3 containers, port size: 6
