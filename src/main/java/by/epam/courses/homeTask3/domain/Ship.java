@@ -167,7 +167,7 @@ public class Ship extends Thread {
         int containersNumberToMove = containersCount(getFreeSpace());
         logger.info("Ship " + id + " want to load " + containersNumberToMove + " from other ship.");
 
-        if (!dock.pickUpContainerFromOtherShip(this, containersNumberToMove)) {
+        if (!dock.loadContainerFromOtherShip(this, containersNumberToMove)) {
             logger.info("Ship " + id + " want to load " + containersNumberToMove + " from port.");
             if (!dock.loadContainersFromPort(this, containersNumberToMove)) {
                 logger.info("Port received containers to ship " + id);

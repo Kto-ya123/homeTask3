@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fded73fc-c049-49af-8406-1bfc42de3e03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/ShipAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/initialization/Initializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logging.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/DockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/service/ThreadService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/util/ThreadManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Port.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Port.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/exceptions/PortException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/exceptions/PortException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/exceptions/ShipException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/exceptions/ShipException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,7 +47,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="23" />
-          <entry key="java" value="2273" />
+          <entry key="java" value="2285" />
           <entry key="properties" value="73" />
           <entry key="txt" value="38" />
           <entry key="xml" value="4" />
@@ -70,7 +55,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2273" />
+          <entry key="JAVA" value="2285" />
           <entry key="PLAIN_TEXT" value="61" />
           <entry key="Properties" value="73" />
           <entry key="XML" value="4" />
@@ -110,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="209" column="23" lean-forward="true" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
+            <state relative-caret-position="1141">
+              <caret line="194" column="21" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1112">
-              <caret line="208" column="32" lean-forward="true" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
+            <state relative-caret-position="449">
+              <caret line="169" column="28" lean-forward="true" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2484#2485#0" expanded="true" />
@@ -157,11 +142,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,10 +196,10 @@
         <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Port.java" />
         <option value="$PROJECT_DIR$/src/main/resources/logging.log" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/initialization/Initializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java" />
         <option value="$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/ThreadTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/by/epam/courses/homeTask3/DockTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java" />
       </list>
     </option>
   </component>
@@ -471,7 +456,7 @@
       <workItem from="1543740533157" duration="200000" />
       <workItem from="1543751354923" duration="25743000" />
       <workItem from="1543794898391" duration="6533000" />
-      <workItem from="1543825152101" duration="2691000" />
+      <workItem from="1543825152101" duration="3700000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1542176077645</created>
@@ -507,7 +492,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41650000" />
+    <option name="totallyTimeSpent" value="42659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -653,18 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1112">
-          <caret line="208" column="32" lean-forward="true" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2484#2485#0" expanded="true" />
-            <element signature="e#2521#2522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/initialization/Initializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -682,20 +655,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="209" column="23" lean-forward="true" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        <state relative-caret-position="449">
+          <caret line="169" column="28" lean-forward="true" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2521#2522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/courses/homeTask3/domain/Dock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1141">
+          <caret line="194" column="21" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -130,14 +130,14 @@ public class Dock {
     //}
 
 
-    public boolean pickUpContainerFromOtherShip(Ship ship, int containersNumberToMove) {
+    public boolean loadContainerFromOtherShip(Ship ship, int containersNumberToMove) {
         boolean result = false;
         lockOfUploadingStorage.lock();
         try {
             if (!queueUploadingShip.isEmpty()) {
                 Ship uploadingShip = queueUploadingShip.poll();
                 logger.info("Ship " + ship.getShipId() + " get ship " + uploadingShip.getShipId() + " for loading");
-                result = doMoveFromOtherShip(ship, uploadingShip, containersNumberToMove);
+                result = moveFromOtherShip(ship, uploadingShip, containersNumberToMove);
                 queueUploadingShip.add(uploadingShip);
             } else {
                 logger.warn("Ship " + ship.getShipId() + " doesn't get ship for loading");
@@ -148,7 +148,7 @@ public class Dock {
         return result;
     }
 
-    private boolean doMoveFromOtherShip(Ship loadingShip, Ship uploadingShip, int containersNumberToMove) {
+    private boolean moveFromOtherShip(Ship loadingShip, Ship uploadingShip, int containersNumberToMove) {
         boolean result = false;
         boolean IsShipLocked = uploadingShip.takeLockForOtherShip();
         if (IsShipLocked) {
@@ -181,7 +181,7 @@ public class Dock {
             if (!queueLoadingShip.isEmpty()) {
                 Ship loadingShipStorage = queueLoadingShip.poll();
                 logger.info("Ship " + ship.getShipId() + " get ship " + loadingShipStorage.getShipId() + " for uploading");
-                result = doMoveToOtherShip(ship, loadingShipStorage, containersNumberToMove);
+                result = moveToOtherShip(ship, loadingShipStorage, containersNumberToMove);
                 queueLoadingShip.add(loadingShipStorage);
             } else {
                 logger.warn("Ship " + ship.getShipId() + " doesn't get ship for uploading");
@@ -192,7 +192,7 @@ public class Dock {
         return result;
     }
 
-    private boolean doMoveToOtherShip(Ship uploadingShip, Ship loadingShip, int containersNumberToMove) {
+    private boolean moveToOtherShip(Ship uploadingShip, Ship loadingShip, int containersNumberToMove) {
         boolean result = false;
         boolean IsShipLocked = loadingShip.takeLockForOtherShip();
         if (IsShipLocked) {
