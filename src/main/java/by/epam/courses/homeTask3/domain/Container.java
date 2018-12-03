@@ -1,4 +1,4 @@
-package domain;
+package by.epam.courses.homeTask3.domain;
 
 public class Container {
 

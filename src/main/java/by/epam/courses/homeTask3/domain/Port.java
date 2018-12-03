@@ -1,8 +1,9 @@
-package domain;
+package by.epam.courses.homeTask3.domain;
 
+import by.epam.courses.homeTask3.domain.exceptions.PortException;
 import org.apache.log4j.Logger;
 
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -18,31 +19,37 @@ public class Port {
     private static Condition notEmpty = lock.newCondition();
 
     private final static int CAPACITY_PORT_STORAGE = 200;
-    private final static int COUNT_BERTH = 4;
+    private final static int COUNT_DOCKS = 4;
+    private static List<Container> portContainers;
+    private Queue<Dock> dockQueue;
 
-    private static Storage storage = new Storage(CAPACITY_PORT_STORAGE);
-    private Queue<Berth> berthQueue;
-
-    private Map<Ship, Berth> usedBirth;
+    private Map<Ship, Dock> usedDock;
 
 
     private Port() {
 
-        berthQueue = new ArrayDeque<>(COUNT_BERTH);
-        for (int i = 0; i < COUNT_BERTH; i++) {
-            berthQueue.add(new Berth(i, storage));
+        dockQueue = new ArrayDeque<>(COUNT_DOCKS);
+        for (int i = 0; i < COUNT_DOCKS; i++) {
+            dockQueue.add(new Dock(i, CAPACITY_PORT_STORAGE, portContainers));
         }
 
-        usedBirth = new HashMap<>();
+        usedDock = new HashMap<>();
 
     }
 
+    public static List<Container> getPortContainers() {
+        return portContainers;
+    }
+
+    public static void setPortContainers(List<Container> portContainers) {
+        Port.portContainers = portContainers;
+    }
 
     public static void initPortStorage(List<Container> containers) {
-        storage.setContainers(containers);
+        portContainers=containers;
     }
 
-    public static Port getInstance() {
+    static Port getInstance() {
 
         if (!instanceCreated.get()) {
             lock.lock();
@@ -59,23 +66,24 @@ public class Port {
     }
 
 
-    public boolean lockBerth(Ship ship) {
-        Berth berth;
+    public boolean lockDock(Ship ship) {
+        Dock dock;
         boolean result = false;
         lock.lock();
         try {
             while (!result) {
-                if (berthQueue.size() > 0) {
-                    berth = berthQueue.element();
-                    berthQueue.remove(berth);
-                    usedBirth.put(ship, berth);
+                if (dockQueue.size() > 0) {
+                    dock = dockQueue.element();
+                    dockQueue.remove(dock);
+                    //dock.setPortContainers(portContainers);
+                    usedDock.put(ship, dock);
                     result = true;
                 } else {
                     notEmpty.await();
                 }
             }
         } catch (InterruptedException e) {
-            logger.error("Ship " + ship.getShipId() + " couldn't lock birth");
+            logger.error("Ship " + ship.getShipId() + " couldn't lock dock");
         } finally {
             lock.unlock();
 
@@ -84,13 +92,14 @@ public class Port {
     }
 
 
-    public void unlockBerth(Ship ship) {
+    public void unlockDock(Ship ship) {
         lock.lock();
-        Berth berth;
+        Dock dock;
         try {
-            berth = usedBirth.get(ship);
-            berthQueue.add(berth);
-            usedBirth.remove(ship);
+            dock = usedDock.get(ship);
+            //dock.setPortContainers(portContainers);
+            dockQueue.add(dock);
+            usedDock.remove(ship);
             notEmpty.signal();
         } catch (Exception e) {
             logger.error("Ship " + ship.getShipId() + " couldn't moore from port");
@@ -100,18 +109,18 @@ public class Port {
     }
 
 
-    public Berth getBerth(Ship ship) throws PortException {
+    public Dock getDock(Ship ship) throws PortException {
         lock.lock();
-        Berth berth;
+        Dock dock;
         try {
-            berth = usedBirth.get(ship);
-            if (berth == null) {
-                throw new PortException("Try to use Berth without blocking.");
+            dock = usedDock.get(ship);
+            if (dock == null) {
+                throw new PortException("Try to use dock without blocking.");
             }
         } finally {
             lock.unlock();
         }
-        return berth;
+        return dock;
     }
 
 }
