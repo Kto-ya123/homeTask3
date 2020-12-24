@@ -1,17 +1,17 @@
-package by.epam.courses.homeTask3.service;
+package homeTask3.service;
 
-import by.epam.courses.homeTask3.domain.Dock;
-import by.epam.courses.homeTask3.domain.ShipAction;
-import by.epam.courses.homeTask3.domain.exceptions.ShipException;
+import homeTask3.domain.Dock;
+import homeTask3.domain.Ship;
+import homeTask3.domain.ShipAction;
+import homeTask3.domain.exceptions.ShipException;
 
 import java.util.Random;
-import by.epam.courses.homeTask3.domain.Ship;
 
 public class ShipActionManager {
 
     private final ShipService service=new ShipService();
 
-    public boolean executeAction(ShipAction action, Dock dock,Ship ship) throws ShipException {
+    public boolean executeAction(ShipAction action, Dock dock, Ship ship) throws ShipException {
         Random random = new Random();
         int timeInPort = random.nextInt(10);
         long start = System.currentTimeMillis();

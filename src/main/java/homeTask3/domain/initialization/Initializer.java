@@ -1,8 +1,8 @@
-package by.epam.courses.homeTask3.domain.initialization;
+package homeTask3.domain.initialization;
 
-import by.epam.courses.homeTask3.domain.Container;
-import by.epam.courses.homeTask3.domain.Port;
-import by.epam.courses.homeTask3.domain.Ship;
+import homeTask3.domain.Container;
+import homeTask3.domain.Port;
+import homeTask3.domain.Ship;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Initializer {
                 containers.add(new Container(idContainer));
             }
 
-            Ship ship = new Ship(i, containers, random.nextInt(10) + 1, random.nextInt(2000));
+            Ship ship = new Ship(i, containers, random.nextInt(10) + 1, random.nextInt(1000));
             ships.add(ship);
 
         }

@@ -1,15 +1,12 @@
-package by.epam.courses.homeTask3.domain;
+package homeTask3.domain;
 
-import by.epam.courses.homeTask3.domain.exceptions.PortException;
-import by.epam.courses.homeTask3.domain.exceptions.ShipException;
-import by.epam.courses.homeTask3.service.ShipActionManager;
+import homeTask3.domain.exceptions.PortException;
+import homeTask3.domain.exceptions.ShipException;
+import homeTask3.service.ShipActionManager;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 
 public class Ship extends Thread {
@@ -20,15 +17,13 @@ public class Ship extends Thread {
     private Integer id;
     private List<Container> containers;
     private Port port;
-    private Lock lock;
     private Integer importance;
 
-    public Ship(Integer id, List<Container> containers,  Integer priority, Integer importance) {
+    public Ship(Integer id, List<Container> containers, Integer priority, Integer importance) {
         this.setPriority(priority);
         this.importance = importance;
         this.id = id;
         this.containers = containers;
-        lock = new ReentrantLock();
     }
 
     @Override
@@ -37,6 +32,7 @@ public class Ship extends Thread {
             port = Port.getInstance();
             while (true) {
                 swim();
+                System.out.println("Initial + " + this.getShipId());
                 goToPort();
             }
         } catch (PortException e) {
@@ -46,7 +42,7 @@ public class Ship extends Thread {
 
     private void swim() {
         try {
-            TimeUnit.SECONDS.sleep(5 - (importance /1000));
+            Thread.sleep(1000 - importance);
             if(port.isInMulctShip(this)){
                 Thread.sleep(5000);
             }
@@ -75,7 +71,7 @@ public class Ship extends Thread {
             } else {
                 logger.info("Ship " + id + " couldn't got to dock ");
             }
-        } catch (ShipException e) {
+        } catch (ShipException | InterruptedException e) {
             logger.warn(e.toString());
         } finally {
             if (isLockedDock) {
@@ -92,18 +88,6 @@ public class Ship extends Thread {
 
     public int getFreeSpace() {
         return SIZE_SHIP_STORAGE - containers.size();
-    }
-
-    void takeLock() {
-        lock.lock();
-    }
-
-    void giveLock() {
-        lock.unlock();
-    }
-
-    boolean takeLockForOtherShip() {
-        return lock.tryLock();
     }
 
     public List<Container> getContainers() {

@@ -1,8 +1,8 @@
-package by.epam.courses.homeTask3.service;
+package homeTask3.service;
 
-import by.epam.courses.homeTask3.domain.Dock;
-import by.epam.courses.homeTask3.domain.Ship;
-import by.epam.courses.homeTask3.domain.exceptions.ShipException;
+import homeTask3.domain.Dock;
+import homeTask3.domain.Ship;
+import homeTask3.domain.exceptions.ShipException;
 import org.apache.log4j.Logger;
 
 import java.util.Random;
@@ -27,7 +27,7 @@ public class ShipService {
         }
     }
 
-    public void loadFromPort(Dock dock,Ship ship) throws ShipException {
+    public void loadFromPort(Dock dock, Ship ship) throws ShipException {
 
         int containersNumberToMove = containersCount(ship.getFreeSpace(),ship);//ship.getFreeSpace();
 
@@ -45,7 +45,7 @@ public class ShipService {
 
     }
 
-    private int containersCount(int freeSpaceSize,Ship ship) throws ShipException {
+    private int containersCount(int freeSpaceSize, Ship ship) throws ShipException {
         if (freeSpaceSize > 0) {
             Random random = new Random();
             int result = random.nextInt(freeSpaceSize);

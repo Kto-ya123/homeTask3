@@ -1,27 +1,20 @@
-package by.epam.courses.homeTask3.domain;
+package homeTask3.domain;
 
-import by.epam.courses.homeTask3.domain.exceptions.PortException;
+import homeTask3.domain.exceptions.PortException;
 import org.apache.log4j.Logger;
 
 import java.util.*;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Port {
 
     private static Logger logger = Logger.getLogger(Port.class);
 
     private static Port instance;
-    private static AtomicBoolean instanceCreated = new AtomicBoolean(false);
-    private static Lock lock = new ReentrantLock();
-    private static Condition notEmpty = lock.newCondition();
 
-    private final static int CAPACITY_PORT_STORAGE = 200;
+    private final static int CAPACITY_PORT_STORAGE = 250;
     private final static int COUNT_DOCKS = 4;
     private static List<Container> portContainers;
-    private Queue<Dock> dockQueue;
+    private final Queue<Dock> dockQueue;
     private Set<Ship> mulctShips;
 
     private Map<Ship, Dock> usedDock;
@@ -38,88 +31,57 @@ public class Port {
 
     }
 
-    public static List<Container> getPortContainers() {
-        return portContainers;
-    }
-
-    public static void setPortContainers(List<Container> portContainers) {
-        Port.portContainers = portContainers;
-    }
-
     public static void initPortStorage(List<Container> containers) {
         portContainers=containers;
     }
 
-    static Port getInstance() {
-
-        if (!instanceCreated.get()) {
-            lock.lock();
-            try {
-                if (!instanceCreated.get()) {
-                    instance = new Port();
-                    instanceCreated.set(true);
-                }
-            } finally {
-                lock.unlock();
-            }
+    public static synchronized Port getInstance() {
+        if(instance == null){
+            instance = new Port();
         }
         return instance;
     }
 
 
-    public boolean lockDock(Ship ship) {
+    public boolean lockDock(Ship ship) throws InterruptedException {
         Dock dock;
         boolean result = false;
-        lock.lock();
-        try {
-            while (!result) {
+        while (!result) {
+            synchronized (dockQueue){
                 if (dockQueue.size() > 0) {
                     dock = dockQueue.element();
                     dockQueue.remove(dock);
                     //dock.setPortContainers(portContainers);
                     usedDock.put(ship, dock);
                     result = true;
-                } else {
-                    notEmpty.await();
                 }
             }
-        } catch (InterruptedException e) {
-            logger.error("Ship " + ship.getShipId() + " couldn't lock dock");
-        } finally {
-            lock.unlock();
-
+            if(!result){
+                Thread.sleep(1000);
+            }
         }
         return result;
     }
 
 
     public void unlockDock(Ship ship) {
-        lock.lock();
         Dock dock;
-        try {
+
+        synchronized (dockQueue){
             dock = usedDock.get(ship);
-            //dock.setPortContainers(portContainers);
             dockQueue.add(dock);
             usedDock.remove(ship);
-            notEmpty.signal();
-        } catch (Exception e) {
-            logger.error("Ship " + ship.getShipId() + " couldn't moore from port");
-        } finally {
-            lock.unlock();
         }
     }
 
 
     public Dock getDock(Ship ship) throws PortException {
-        lock.lock();
         Dock dock;
-        try {
+        synchronized (usedDock){
             dock = usedDock.get(ship);
             if (dock == null) {
                 throw new PortException("Try to use dock without blocking.");
             }
-        } finally {
-            lock.unlock();
         }
         return dock;
     }

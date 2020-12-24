@@ -1,4 +1,4 @@
-package by.epam.courses.homeTask3.domain;
+package homeTask3.domain;
 
 import org.apache.log4j.Logger;
 
@@ -6,8 +6,6 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Dock {
 
@@ -16,9 +14,6 @@ public class Dock {
     private int id;
     private int portCapacity;
     private List<Container> portContainers;
-    private static Lock portStorageLock = new ReentrantLock();
-    private static Lock lockOfLoadingStorage = new ReentrantLock();
-    private static Lock lockOfUploadingStorage = new ReentrantLock();
     private static Queue<Ship> queueLoadingShip = new ArrayDeque<>();
     private static Queue<Ship> queueUploadingShip = new ArrayDeque<>();
 
@@ -27,10 +22,6 @@ public class Dock {
         this.portCapacity = portCapacity;
         this.portContainers = portContainers;
     }
-
-    //public void setPortContainers(List<Container> portContainers) {
-    //    this.portContainers = portContainers;
-    //}
 
     public List<Container> getPortContainers() {
         return portContainers;
@@ -53,25 +44,19 @@ public class Dock {
     public boolean addContainerToPort(Ship ship, int requestedContainersCount) {
         boolean result = false;
 
-        lockOfUploadingStorage.lock();
-        try {
+        synchronized (queueUploadingShip){
             queueUploadingShip.add(ship);
-        } finally {
-            lockOfUploadingStorage.unlock();
         }
-        portStorageLock.lock();
-        try {
-            ship.takeLock();
-            if (requestedContainersCount <= getFreeSpace()) {
-                List<Container> containers = ship.pickUpContainers(requestedContainersCount);
-                result = this.portContainers.addAll(containers);
-            }
-            ship.giveLock();
 
-        } finally {
-            queueUploadingShip.remove(ship);
-            portStorageLock.unlock();
+        synchronized (portContainers){
+            synchronized (queueUploadingShip) {
+                if (requestedContainersCount <= getFreeSpace()) {
+                    List<Container> containers = ship.pickUpContainers(requestedContainersCount);
+                    result = this.portContainers.addAll(containers);
+                }
+            }
         }
+        queueUploadingShip.remove(ship);
         return result;
     }
 
@@ -79,25 +64,17 @@ public class Dock {
     public boolean loadContainersFromPort(Ship ship, int requestedContainersCount) {
         boolean result = false;
 
-        lockOfLoadingStorage.lock();
-        try {
+        synchronized (queueLoadingShip){
             queueLoadingShip.add(ship);
-        } finally {
-            lockOfLoadingStorage.unlock();
         }
 
-        portStorageLock.lock();
-        try {
-            ship.takeLock();
+        synchronized (portContainers){
             if (requestedContainersCount >= portContainers.size() && !portContainers.isEmpty()) {
                 List<Container> containers = pickUpContainers(requestedContainersCount);
                 result = ship.addContainers(containers);
             }
-            ship.giveLock();
-        } finally {
-            queueLoadingShip.remove(ship);
-            portStorageLock.unlock();
         }
+        queueLoadingShip.remove(ship);
         return result;
     }
 }

@@ -17,7 +17,7 @@ public class DockTest {
         shipContainers.add(new Container(11));
         shipContainers.add(new Container(12));
         shipContainers.add(new Container(13));
-        Ship ship = new Ship(1, shipContainers);
+        Ship ship = new Ship(1, shipContainers, 9, 1000);
         List<Container> portContainers = new ArrayList<>();
         portContainers.add(new Container(1));
         portContainers.add(new Container(2));
@@ -35,7 +35,7 @@ public class DockTest {
         shipContainers.add(new Container(11));
         shipContainers.add(new Container(12));
         shipContainers.add(new Container(13));
-        Ship ship = new Ship(1, shipContainers);
+        Ship ship = new Ship(1, shipContainers, 9, 1000);
         List<Container> portContainers = new ArrayList<>();
         portContainers.add(new Container(1));
         portContainers.add(new Container(2));
